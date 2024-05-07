@@ -1,6 +1,6 @@
 {
-  "name": "user-service",
-  "main": "../../dist/user-service/src/index.js",
+  "name": "increment-service",
+  "main": "../../dist/increment-service/src/index.js",
   "dependencies": {
     "firebase-admin": "^12.1.0",
     "firebase-functions": "^5.0.1"

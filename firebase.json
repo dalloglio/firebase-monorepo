@@ -1,6 +1,10 @@
 {
   "functions": [
     {
+      "source": "apps/increment-service",
+      "codebase": "increment-service"
+    },
+    {
       "source": "apps/user-service",
       "codebase": "user-service"
     }
