@@ -1,6 +1,10 @@
 {
   "name": "user-service",
-  "main": "../../dist/user-service/src/index.js",
+  "main": "../../dist/index.js",
+  "dependencies": {
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.1"
+  },
   "engines": {
     "node": "18"
   }

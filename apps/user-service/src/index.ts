@@ -1,12 +1,10 @@
-import {initializeApp} from "firebase-admin/app";
-import {getFirestore} from "firebase-admin/firestore";
-import {onRequest} from "firebase-functions/v1/https";
+import { initializeApp } from "firebase-admin/app";
+import { onRequest } from "firebase-functions/v1/https";
+import app from "./app";
+import onUserCreated from "./infra/events/user-created";
 
 initializeApp();
-const db = getFirestore();
 
-export const createUser = onRequest(async (req, res) => {
-  const {name} = req.body;
-  await db.collection("users").doc(name).set({name});
-  res.status(201).end();
-});
+export const api = onRequest(app);
+
+export const setIncrementIdOnUserCreated = onUserCreated.setIncrementIdHandler;
