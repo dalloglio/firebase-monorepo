@@ -1,7 +1,0 @@
-{
-  "name": "trigger-service",
-  "main": "../../dist/trigger-service/src/index.js",
-  "engines": {
-    "node": "18"
-  }
-}
