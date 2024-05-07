@@ -1,21 +1,6 @@
 {
   "name": "trigger-service",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "firebase-admin": "^12.1.0",
-    "firebase-functions": "^5.0.1"
-  },
-  "devDependencies": {
-    "typescript": "^5.4.5"
-  },
+  "main": "../dist/trigger-service/index.js",
   "engines": {
     "node": "18"
   }

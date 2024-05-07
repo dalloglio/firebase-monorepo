@@ -1,10 +1,11 @@
-import admin from "firebase-admin";
-import functions from "firebase-functions";
+import {initializeApp} from "firebase-admin/app";
+import {getFirestore} from "firebase-admin/firestore";
+import {onRequest} from "firebase-functions/v1/https";
 
-admin.initializeApp();
-const db = admin.firestore();
+initializeApp();
+const db = getFirestore();
 
-export const createUser = functions.https.onRequest(async (req, res) => {
+export const createUser = onRequest(async (req, res) => {
   const {name} = req.body;
   await db.collection("users").doc(name).set({name});
   res.status(201).end();
