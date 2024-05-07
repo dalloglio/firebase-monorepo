@@ -1,11 +1,11 @@
 {
   "functions": [
     {
-      "source": "trigger-service",
+      "source": "apps/trigger-service",
       "codebase": "trigger-service"
     },
     {
-      "source": "user-service",
+      "source": "apps/user-service",
       "codebase": "user-service"
     }
   ],

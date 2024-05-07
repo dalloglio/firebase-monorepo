@@ -1,6 +1,6 @@
 {
   "name": "user-service",
-  "main": "../dist/user-service/index.js",
+  "main": "../../dist/user-service/src/index.js",
   "engines": {
     "node": "18"
   }
