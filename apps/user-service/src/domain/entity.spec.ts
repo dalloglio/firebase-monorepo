@@ -18,19 +18,4 @@ describe("User Entity", () => {
       expect(() => new User("id", "")).toThrow("Name is required");
     });
   });
-
-  describe("Set Increment ID", () => {
-    it("should set increment id", () => {
-      const user = new User("id", "name");
-      user.setIncrementId(1);
-      expect(user.incrementId).toBe(1);
-    });
-
-    it("should throw an error if increment_id is less than zero", () => {
-      const user = new User("id", "name");
-      expect(() => user.setIncrementId(-1)).toThrow(
-        "Increment id must be greater than zero"
-      );
-    });
-  });
 });

@@ -29,37 +29,4 @@ describe("FirestoreUserRepository", () => {
       });
     });
   });
-
-  describe("exists", () => {
-    it("should check if user exists", async () => {
-      const exists = await repository.exists("id");
-      expect(exists).toBe(true);
-      expect(firestore.collection).toHaveBeenCalledTimes(1);
-      expect(firestore.collection).toHaveBeenCalledWith("users");
-      expect(firestore.collection("users").doc).toHaveBeenCalledTimes(1);
-      expect(firestore.collection("users").doc).toHaveBeenCalledWith("id");
-      expect(firestore.collection("users").doc("id").get).toHaveBeenCalledTimes(
-        1
-      );
-      expect(
-        firestore.collection("users").doc("id").get
-      ).toHaveBeenCalledWith();
-    });
-  });
-
-  describe("setIncrementId", () => {
-    it("should update the increment_id attribute", async () => {
-      await repository.setIncrementId("id", 1);
-      expect(firestore.collection).toHaveBeenCalledTimes(1);
-      expect(firestore.collection).toHaveBeenCalledWith("users");
-      expect(firestore.collection("users").doc).toHaveBeenCalledTimes(1);
-      expect(firestore.collection("users").doc).toHaveBeenCalledWith("id");
-      expect(
-        firestore.collection("users").doc("id").update
-      ).toHaveBeenCalledTimes(1);
-      expect(
-        firestore.collection("users").doc("id").update
-      ).toHaveBeenCalledWith({ increment_id: 1 });
-    });
-  });
 });

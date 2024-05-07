@@ -12,13 +12,4 @@ export class FirestoreUserRepository implements UserRepository {
     await this.collection.doc(id).set({ name });
     return user;
   }
-
-  async exists(id: string): Promise<boolean> {
-    const doc = await this.collection.doc(id).get();
-    return doc.exists;
-  }
-
-  async setIncrementId(id: string, incrementId: number): Promise<void> {
-    await this.collection.doc(id).update({ increment_id: incrementId });
-  }
 }

@@ -21,11 +21,4 @@ export class User {
   get incrementId(): number | undefined {
     return this._incrementId;
   }
-
-  setIncrementId(value: number) {
-    if (value <= 0) {
-      throw new Error("Increment id must be greater than zero");
-    }
-    this._incrementId = value;
-  }
 }
