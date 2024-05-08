@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  workspace:
+    image: node:18.20.2-alpine3.19
+    working_dir: /home/node/app
+    user: node
+    command: tail -f /dev/null
+    volumes:
+      - .:/home/node/app

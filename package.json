@@ -1,9 +1,18 @@
 {
   "name": "firebase-monorepo",
+  "description": "Firebase monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "Ricardo Pires",
+    "email": "ricardo.tech@live.com"
+  },
+  "license": "MIT",
   "scripts": {
     "build": "rm -rf dist && tsc",
     "start": "npm run build && firebase emulators:start",
-    "test": "jest"
+    "test": "jest",
+    "test:cov": "jest --coverage"
   },
   "dependencies": {
     "express": "^4.19.2",
